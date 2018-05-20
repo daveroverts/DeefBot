@@ -15,5 +15,7 @@ async def on_ready():
 async def on_message(message):
     if message.content == "mand":
         await client.send_message(message.channel, "MAND!")
+    elif message.content == "flip":
+        await client.send_message(message.channel, "(╯°□°）╯︵ ┻━┻")
 
 client.run('erm..... get your own token!')
