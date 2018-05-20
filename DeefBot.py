@@ -13,6 +13,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    message.content = message.content.lower()
     if message.content == "mand":
         await client.send_message(message.channel, "MAND!")
     elif message.content == "flip":
