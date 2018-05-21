@@ -21,5 +21,7 @@ async def on_message(message):
         await client.send_message(message.channel, "MAND!")
     elif message.content == "flip":
         await client.send_message(message.channel, random.choice(tables))
+    elif message.content == "unflip":
+        await client.send_message(message.channel, "┬─┬ ノ( ゜-゜ノ)")
 
 client.run('erm..... get your own token!')
