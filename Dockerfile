@@ -5,4 +5,4 @@ COPY pyproject.toml poetry.lock ./
 RUN cd /tmp/myapp && poetry install --no-dev --no-root
 # Copy in everything else:
 COPY . .
-CMD poetry run python deefbot/DeefBot.py
+CMD poetry run python -u deefbot/DeefBot.py
