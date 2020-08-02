@@ -1,9 +1,8 @@
-FROM python:3.7
+FROM python:3.7-slim
 RUN pip install poetry
 WORKDIR /tmp/myapp
 COPY pyproject.toml poetry.lock ./
-RUN cd /tmp/myapp && poetry install --no-root
+RUN cd /tmp/myapp && poetry install --no-dev --no-root
 # Copy in everything else:
 COPY . .
-RUN poetry install
 CMD poetry run python deefbot/DeefBot.py
